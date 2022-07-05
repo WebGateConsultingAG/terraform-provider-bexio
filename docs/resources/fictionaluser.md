@@ -1,6 +1,6 @@
 ---
 page_title: "bexio_fictionaluser Resource - terraform-provider-bexio"
-subcategory: "Resources"
+subcategory: ""
 description: |-
 The bexio_fictionaluser resource lets you create a Fictional User
   
