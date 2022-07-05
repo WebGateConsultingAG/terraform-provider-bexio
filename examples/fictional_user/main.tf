@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     bexio = {
-      source  = "hashicorp.com/wgc/bexio"
+      source = "WebGateConsultingAG/bexio"
     }
   }
 }
