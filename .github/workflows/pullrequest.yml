@@ -1,0 +1,40 @@
+name: PR Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Go fmt
+        run: make fmt
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Run tests
+        run: |
+          export BEXIO_URL=${{ secrets.BEXIO_URL }}
+          export BEXIO_TOKEN=${{ secrets.BEXIO_TOKEN }}
+          make testacc TEST=./bexioprovider
