@@ -1,6 +1,6 @@
 ---
 page_title: "bexio_contact Resource - terraform-provider-bexio"
-subcategory: "Resources"
+subcategory: ""
 description: |-
   The bexio_contact resource lets you create a Contact.
 
