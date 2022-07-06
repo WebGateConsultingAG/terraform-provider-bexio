@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     bexio = {
-      source = "WebGateConsultingAG/bexio"
+      source = "WebGateConsultingAG/bexio"d
     }
   }
 }
